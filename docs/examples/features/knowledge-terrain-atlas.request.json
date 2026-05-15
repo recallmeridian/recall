@@ -1,0 +1,14 @@
+{
+  "feature_id": "knowledge-terrain-atlas",
+  "tool": "feature.terrain-atlas",
+  "action": "feature.terrain-atlas",
+  "values": [
+    {
+      "origin": {
+        "partition": "trusted_kb",
+        "source_trust_level": "trusted",
+        "source_type": "feature_fixture"
+      }
+    }
+  ]
+}

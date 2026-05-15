@@ -1,0 +1,24 @@
+{
+  "feature_id": "recall-project-health-brief",
+  "tool": "recall.search",
+  "action": "recall.search",
+  "values": [
+    {
+      "origin": {
+        "partition": "trusted_kb",
+        "source_trust_level": "trusted",
+        "source_type": "local_recall_project_state",
+        "entry_id": "recall-project-health-brief-input"
+      }
+    },
+    {
+      "origin": {
+        "partition": "audit_sediment",
+        "source_trust_level": "trusted",
+        "source_type": "local_feature_health",
+        "entry_id": "recall-feature-health-summary"
+      }
+    }
+  ],
+  "outputRef": "recall://outputs/recall-project-health-brief/example"
+}

@@ -1,0 +1,53 @@
+{
+  "feature_id": "recall-project-health-brief",
+  "name": "Recall Project Health Brief",
+  "purpose": "Create a local project health summary from trusted Recall project state.",
+  "owner_id": "recall-core-team",
+  "runtime_mode": "recall-local",
+  "lifecycle_state": "local_experiment",
+  "local_only": true,
+  "publishable": false,
+  "risk_level": "read-only",
+  "required_partitions": [
+    "trusted_kb",
+    "audit_sediment"
+  ],
+  "required_capabilities": [
+    {
+      "tool": "recall.search",
+      "action": "recall.search"
+    },
+    {
+      "tool": "feature.health",
+      "action": "feature.health"
+    }
+  ],
+  "required_tools": [],
+  "human_approval_required_for": [],
+  "denied_actions": [
+    {
+      "tool": "meridian.push",
+      "action": "publish:network"
+    },
+    {
+      "tool": "shell",
+      "action": "run:code"
+    },
+    {
+      "tool": "database",
+      "action": "sql:raw"
+    }
+  ],
+  "output_type": "local_brief",
+  "audit_level": "standard",
+  "validation_method": "npm.cmd test -- --runTestsByPath test\\feature-example.test.js",
+  "last_validated_at": "",
+  "source_refs": [
+    "recall://research/camel-2025-defeating-prompt-injections",
+    "recall://research/owasp-llm-top10-2025",
+    "recall://research/nist-ai-rmf-genai-profile",
+    "repo:docs/security/owasp-coverage-matrix.md",
+    "repo:docs/architecture/meridian-feature-capability-layer.md"
+  ],
+  "risk_notes": "Local read-only feature. It may summarize trusted project/audit state, but it cannot publish, execute code, access raw SQL, or traverse quarantine/sensitive vault partitions."
+}

@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "id": "target-source-run-required",
+      "kind": "target",
+      "taskId": "codebase-trace-reviewer-source-run-required",
+      "baselineAnswer": "A basin can be closed after a proposal and replay look good.",
+      "candidateAnswer": "A basin closure proposal needs source-run evidence from codebase-trace-reviewer and replay-backed promotion before the basin is marked closed.",
+      "modelCutoffDate": "2026-05-01"
+    },
+    {
+      "id": "regression-replay-required",
+      "kind": "regression",
+      "taskId": "codebase-trace-reviewer-replay-required",
+      "baselineAnswer": "A specialist can promote only after replay evidence shows target improvement and a regression case does not get worse.",
+      "candidateAnswer": "A specialist can promote only after replay evidence shows target improvement and a regression case does not get worse.",
+      "modelCutoffDate": "2026-05-01"
+    },
+    {
+      "id": "regression-truthfulness",
+      "kind": "regression",
+      "taskId": "codebase-trace-reviewer-truthfulness-regression",
+      "baselineAnswer": "Do not overclaim. Mark roadmap items as future work and require evidence before promotion.",
+      "candidateAnswer": "Do not overclaim. Mark roadmap items as future work and require evidence before promotion.",
+      "modelCutoffDate": "2026-05-01"
+    }
+  ]
+}

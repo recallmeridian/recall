@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "northStar": "Build a durable intelligence system that produces repeatable alpha across markets.",
+  "peaks": [
+    {
+      "id": "peak-1",
+      "label": "Profitable autonomous trading",
+      "targetDate": "2026-12-31",
+      "successCriteria": "All trading bots live with positive Sharpe over 30-day window",
+      "projects": ["fixture-trading"]
+    },
+    {
+      "id": "peak-2",
+      "label": "Recall as marketable product",
+      "targetDate": "2026-12-31",
+      "successCriteria": "Paying users or open-source traction",
+      "projects": [
+        {
+          "id": "fixture-product",
+          "crossPeakNote": "Cross-peak relevance to Peak 3 not modeled in v0."
+        }
+      ]
+    },
+    {
+      "id": "peak-3",
+      "label": "Unified intelligence substrate",
+      "targetDate": null,
+      "successCriteria": "All bots reading from one shared signal graph",
+      "projects": []
+    }
+  ],
+  "foundation": ["fixture-research"],
+  "offPeak": ["fixture-empty"]
+}

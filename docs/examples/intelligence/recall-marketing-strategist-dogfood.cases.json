@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "id": "target-public-grok-automation-gap",
+      "kind": "target",
+      "taskId": "recall-marketing-public-grok-automation-gap",
+      "baselineAnswer": "Public @grok can directly access my private Recall memory on X.",
+      "candidateAnswer": "Public @grok cannot directly access private Recall without an explicit bridge; describe the current workflow as a private Recall-connected session or manual bridge.",
+      "modelCutoffDate": "2026-05-01"
+    },
+    {
+      "id": "regression-overclaim",
+      "kind": "regression",
+      "taskId": "recall-marketing-overclaim-regression",
+      "baselineAnswer": "Do not overclaim. Distinguish current capability from roadmap and avoid implying hidden model training.",
+      "candidateAnswer": "Do not overclaim. Distinguish current capability from roadmap and avoid implying hidden model training.",
+      "modelCutoffDate": "2026-05-01"
+    },
+    {
+      "id": "target-observable-proof",
+      "kind": "target",
+      "taskId": "recall-marketing-observable-proof-moment",
+      "baselineAnswer": "Recall is a universal continuity substrate for AI.",
+      "candidateAnswer": "Show one observable proof loop: draft claim, Recall-connected source run, overclaim flag, replay evidence, and promoted specialist version.",
+      "modelCutoffDate": "2026-05-01"
+    }
+  ]
+}

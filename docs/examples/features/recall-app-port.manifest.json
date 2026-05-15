@@ -1,0 +1,109 @@
+{
+  "feature_id": "recall-app-port",
+  "name": "Recall App Port",
+  "purpose": "Provide one safe third-party application gateway for Recall memory, draft writes, approvals, diagnostics, and audit.",
+  "owner_id": "recall-core-team",
+  "runtime_mode": "recall-local",
+  "lifecycle_state": "local_experiment",
+  "local_only": true,
+  "publishable": false,
+  "risk_level": "paper-write",
+  "required_partitions": [
+    "trusted_kb",
+    "candidate",
+    "audit_sediment",
+    "working_context"
+  ],
+  "required_capabilities": [
+    {
+      "tool": "app-port.registry",
+      "action": "app.register"
+    },
+    {
+      "tool": "app-port.registry",
+      "action": "app.manifest.check"
+    },
+    {
+      "tool": "app-port.policy",
+      "action": "app.request.review"
+    },
+    {
+      "tool": "app-port.audit",
+      "action": "app.audit.append"
+    },
+    {
+      "tool": "recall.search",
+      "action": "recall.search.scoped"
+    },
+    {
+      "tool": "recall.add",
+      "action": "recall.write.candidate"
+    }
+  ],
+  "required_tools": [],
+  "human_approval_required_for": [
+    {
+      "tool": "recall.promote",
+      "action": "promote:candidate"
+    },
+    {
+      "tool": "recall.search",
+      "action": "read:cross_project"
+    },
+    {
+      "tool": "external",
+      "action": "export:external"
+    },
+    {
+      "tool": "external",
+      "action": "send:external"
+    }
+  ],
+  "denied_actions": [
+    {
+      "tool": "database",
+      "action": "sql:raw"
+    },
+    {
+      "tool": "shell",
+      "action": "run:code"
+    },
+    {
+      "tool": "recall.delete",
+      "action": "delete:anything"
+    },
+    {
+      "tool": "meridian.push",
+      "action": "publish:network"
+    },
+    {
+      "tool": "recall.vault",
+      "action": "read:sensitive_vault"
+    },
+    {
+      "tool": "recall.quarantine",
+      "action": "read:quarantine"
+    }
+  ],
+  "output_type": "app_port_decision",
+  "audit_level": "high",
+  "validation_method": "npm.cmd test -- test/feature-manifest.test.js test/feature-command.test.js test/chatgpt-recall-mcp-server.test.js",
+  "last_validated_at": "",
+  "source_refs": [
+    "repo:docs/plans/2026-05-07-recall-app-port-core-feature-plan.md",
+    "repo:docs/architecture/meridian-feature-capability-layer.md",
+    "repo:docs/architecture/geomorphological-security-core.md",
+    "repo:docs/setup/chatgpt-desktop-recall-mcp.md",
+    "repo:docs/setup/managed-chatgpt-relay.md",
+    "repo:docs/plans/2026-05-03-recall-cursor-mcp-bridge-roadmap.md",
+    "repo:docs/plans/research-extractions/2026-05-03-camel-capability-security-extraction.md",
+    "repo:docs/plans/research-extractions/2026-05-03-owasp-mcp-top-10-extraction.md",
+    "repo:docs/plans/research-extractions/2026-05-03-microsoft-spotlighting-extraction.md",
+    "repo:docs/plans/research-extractions/2026-05-03-nist-ai-rmf-genai-profile-extraction.md",
+    "external:https://modelcontextprotocol.io/specification/draft/basic",
+    "external:https://owasp.org/www-project-mcp-top-10/",
+    "external:https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+    "external:https://www.microsoft.com/en-us/research/publication/defending-against-indirect-prompt-injection-attacks-with-spotlighting/"
+  ],
+  "risk_notes": "Core gateway feature for third-party applications. V1 is local-only and may write candidate evidence, but it cannot create trusted memory directly, read quarantine or sensitive vault partitions, run raw SQL, execute code, delete data, send/export externally without approval, or publish to Meridian."
+}

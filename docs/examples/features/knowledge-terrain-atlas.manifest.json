@@ -1,0 +1,43 @@
+{
+  "feature_id": "knowledge-terrain-atlas",
+  "name": "Knowledge Terrain Atlas",
+  "purpose": "Project Recall knowledge graph data into a diagnostic topographic terrain atlas without changing core retrieval, ranking, or promotion behavior.",
+  "owner_id": "recall-dev",
+  "runtime_mode": "recall-local",
+  "lifecycle_state": "local_experiment",
+  "local_only": true,
+  "publishable": false,
+  "risk_level": "read-only",
+  "required_partitions": [
+    "trusted_kb",
+    "candidate_basin"
+  ],
+  "required_capabilities": [
+    {
+      "tool": "feature.terrain-atlas",
+      "action": "feature.terrain-atlas"
+    }
+  ],
+  "required_tools": [],
+  "human_approval_required_for": [],
+  "denied_actions": [
+    {
+      "tool": "retrieval.rank",
+      "action": "retrieval.rank.mutate"
+    },
+    {
+      "tool": "promotion",
+      "action": "promotion.promote"
+    }
+  ],
+  "output_type": "projection",
+  "audit_level": "standard",
+  "validation_method": "diagnostic JSON shape tests plus later user interpretation validation",
+  "last_validated_at": "",
+  "source_refs": [
+    "kdd-2017-visualizing-attributed-graphs-via-terrain-metaphor",
+    "umap-2018-dimension-reduction",
+    "skupin-2000-cartographic-perspectives-information-visualization"
+  ],
+  "risk_notes": "Terrain is an interpretive projection. Elevation and distance must not be treated as truth or value without validation."
+}

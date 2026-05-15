@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "id": "target-replay-required",
+      "kind": "target",
+      "taskId": "codebase-trace-reviewer-replay-required",
+      "baselineAnswer": "A specialist can promote after a human says the answer looks better.",
+      "candidateAnswer": "A specialist can promote only after replay evidence shows target improvement and a regression case does not get worse.",
+      "modelCutoffDate": "2026-05-01"
+    },
+    {
+      "id": "regression-truthfulness",
+      "kind": "regression",
+      "taskId": "codebase-trace-reviewer-truthfulness-regression",
+      "baselineAnswer": "Do not overclaim. Mark roadmap items as future work and require evidence before promotion.",
+      "candidateAnswer": "Do not overclaim. Mark roadmap items as future work and require evidence before promotion.",
+      "modelCutoffDate": "2026-05-01"
+    }
+  ]
+}

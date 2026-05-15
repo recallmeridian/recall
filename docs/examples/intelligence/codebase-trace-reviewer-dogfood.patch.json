@@ -1,0 +1,15 @@
+{
+  "prompt": "Review Recall implementation traces for recurring failures. Require source-run evidence from codebase-trace-reviewer when a proposal claims to close a failure basin, and require replay evidence with at least one target improvement plus one non-regressed regression case before promotion.",
+  "evalSetAdditions": [
+    "codebase-trace-reviewer-source-run-required",
+    "codebase-trace-reviewer-replay-required",
+    "codebase-trace-reviewer-truthfulness-regression"
+  ],
+  "approvedLessonsAdditions": [
+    "Failure basin closure needs source-run evidence plus replay-backed promotion.",
+    "A targeted basin can move to closed only after replay-backed specialist promotion."
+  ],
+  "knownFailureBasinsAdditions": [
+    "basin:basin-closure-without-source-run"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "campaignIdea": "Use the Grok co-host setup to show the world Recall.",
+  "draftCopy": "I gave public @grok my Recall memory. Now it can answer from all my private Grok, Claude, ChatGPT, and local model sessions directly on X. Recall turns every model into a self-improving specialist.",
+  "constraints": [
+    "Do not claim public @grok can access private Recall unless a real bridge exists.",
+    "Distinguish current CLI/MCP/manual bridge capability from roadmap automation.",
+    "Turn abstract memory philosophy into a visible proof moment."
+  ],
+  "targetAudience": "technical founders and AI builders"
+}

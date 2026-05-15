@@ -1,0 +1,452 @@
+{
+  "entryType": "specialist_proof_trail",
+  "project": "recall-dev",
+  "generatedAt": "2026-05-12T22:50:50.009Z",
+  "specialistId": "recall-marketing-strategist",
+  "version": 2,
+  "currentVersion": 2,
+  "snapshot": {
+    "id": "specialist-snapshot-recall-marketing-strategist-v2",
+    "entryType": "specialist_version_snapshot",
+    "project": "recall-dev",
+    "specialistId": "recall-marketing-strategist",
+    "version": 2,
+    "manifest": {
+      "id": "recall-marketing-strategist",
+      "entryType": "specialist_manifest",
+      "project": "recall-dev",
+      "version": 2,
+      "status": "active",
+      "purpose": "Improve Recall public positioning while preventing overclaims.",
+      "prompt": "Improve Recall public positioning while protecting truthfulness. Always distinguish current capability from roadmap, flag public-assistant/private-Recall automation gaps, avoid saying specialists learn through model training unless training exists, and turn abstract claims into visible proof moments with source-run and replay evidence.",
+      "retrievalRecipe": {},
+      "allowedMemoryPartitions": [],
+      "evalSet": [
+        "recall-marketing-public-grok-automation-gap",
+        "recall-marketing-overclaim-regression",
+        "recall-marketing-observable-proof-moment"
+      ],
+      "knownFailureBasins": [
+        "basin:recall-marketing-overclaim"
+      ],
+      "approvedLessons": [
+        "Recall marketing should say private Recall-connected workflow or explicit bridge unless public assistant access is actually implemented.",
+        "Evolving specialist claims should point to versioned bundles, source runs, replay evidence, and promoted lessons rather than hidden model learning.",
+        "Public proof loops need same-post observability: claim, source memory or run, replay/version evidence, and current-vs-roadmap boundary."
+      ],
+      "performanceHistory": [
+        {
+          "version": 2,
+          "proposalId": "proposal-recall-marketing-strategist-ilq5-dogfood",
+          "replayId": "replay-recall-marketing-strategist-ilq5-dogfood",
+          "targetScore": 1,
+          "regressionScore": 0,
+          "evidenceRef": "specialist-replay://recall-marketing-strategist/proposal-recall-marketing-strategist-ilq5-dogfood/2/passed",
+          "promotedAt": "2026-05-12T21:47:56.222Z"
+        }
+      ],
+      "rollbackVersion": 1,
+      "createdAt": "2026-05-12T21:47:21.446Z",
+      "updatedAt": "2026-05-12T21:47:56.222Z"
+    },
+    "proposalId": "proposal-recall-marketing-strategist-ilq5-dogfood",
+    "replayId": "replay-recall-marketing-strategist-ilq5-dogfood",
+    "evidenceRefs": [
+      "specialist-replay://recall-marketing-strategist/proposal-recall-marketing-strategist-ilq5-dogfood/2/passed"
+    ],
+    "createdAt": "2026-05-12T21:47:56.223Z"
+  },
+  "priorSnapshot": {
+    "id": "specialist-snapshot-recall-marketing-strategist-v1",
+    "entryType": "specialist_version_snapshot",
+    "project": "recall-dev",
+    "specialistId": "recall-marketing-strategist",
+    "version": 1,
+    "manifest": {
+      "id": "recall-marketing-strategist",
+      "entryType": "specialist_manifest",
+      "project": "recall-dev",
+      "version": 1,
+      "status": "draft",
+      "purpose": "Improve Recall public positioning while preventing overclaims.",
+      "prompt": "Improve Recall marketing copy. Flag automation gaps, overclaims, roadmap blur, and observability gaps.",
+      "retrievalRecipe": {},
+      "allowedMemoryPartitions": [],
+      "evalSet": [
+        "recall-marketing-public-grok-automation-gap",
+        "recall-marketing-overclaim-regression",
+        "recall-marketing-observable-proof-moment"
+      ],
+      "knownFailureBasins": [],
+      "approvedLessons": [],
+      "performanceHistory": [],
+      "rollbackVersion": null,
+      "createdAt": "2026-05-12T21:47:21.446Z",
+      "updatedAt": "2026-05-12T21:47:21.446Z"
+    },
+    "proposalId": "",
+    "replayId": "",
+    "evidenceRefs": [
+      "specialist-manifest://initial"
+    ],
+    "createdAt": "2026-05-12T21:47:21.449Z"
+  },
+  "proposal": {
+    "id": "proposal-recall-marketing-strategist-ilq5-dogfood",
+    "entryType": "specialist_proposal",
+    "project": "recall-dev",
+    "specialistId": "recall-marketing-strategist",
+    "fromVersion": 1,
+    "proposalType": "prompt_patch",
+    "status": "promoted",
+    "summary": "Require truthfulness and observability guardrails for public Recall marketing.",
+    "patch": {
+      "prompt": "Improve Recall public positioning while protecting truthfulness. Always distinguish current capability from roadmap, flag public-assistant/private-Recall automation gaps, avoid saying specialists learn through model training unless training exists, and turn abstract claims into visible proof moments with source-run and replay evidence.",
+      "evalSetAdditions": [
+        "recall-marketing-public-grok-automation-gap",
+        "recall-marketing-overclaim-regression",
+        "recall-marketing-observable-proof-moment"
+      ],
+      "approvedLessonsAdditions": [
+        "Recall marketing should say private Recall-connected workflow or explicit bridge unless public assistant access is actually implemented.",
+        "Evolving specialist claims should point to versioned bundles, source runs, replay evidence, and promoted lessons rather than hidden model learning.",
+        "Public proof loops need same-post observability: claim, source memory or run, replay/version evidence, and current-vs-roadmap boundary."
+      ],
+      "knownFailureBasinsAdditions": [
+        "basin:recall-marketing-overclaim"
+      ]
+    },
+    "sourceRunIds": [
+      "run-recall-marketing-strategist-ilq5-dogfood"
+    ],
+    "targetBasinIds": [
+      "basin:recall-marketing-overclaim"
+    ],
+    "evidenceRefs": [
+      "repo:docs/examples/intelligence/recall-marketing-strategist-dogfood.output.json"
+    ],
+    "riskLevel": "medium",
+    "verificationRefs": [
+      "specialist-replay://recall-marketing-strategist/proposal-recall-marketing-strategist-ilq5-dogfood/2/passed"
+    ],
+    "createdAt": "2026-05-12T21:47:40.717Z",
+    "updatedAt": "2026-05-12T21:47:56.222Z"
+  },
+  "replay": {
+    "id": "replay-recall-marketing-strategist-ilq5-dogfood",
+    "entryType": "specialist_replay",
+    "project": "recall-dev",
+    "specialistId": "recall-marketing-strategist",
+    "proposalId": "proposal-recall-marketing-strategist-ilq5-dogfood",
+    "fromVersion": 1,
+    "candidateVersion": 2,
+    "status": "passed",
+    "targetScore": 1,
+    "regressionScore": 0,
+    "passed": true,
+    "caseResults": [
+      {
+        "id": "target-public-grok-automation-gap",
+        "kind": "target",
+        "title": "recall-marketing-public-grok-automation-gap",
+        "taskId": "recall-marketing-public-grok-automation-gap",
+        "baselineScore": 0,
+        "candidateScore": 1,
+        "delta": 1,
+        "passed": true,
+        "evidenceRef": "benchmark://recall-marketing-public-grok-automation-gap/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-public-grok-automation-gap-replay-recall-marketing-strategist-ilq5-dogfood-target-public-grok-automation-gap-candidate",
+        "evidenceRefs": [
+          "benchmark://recall-marketing-public-grok-automation-gap/specialist-recall-marketing-strategist-v1/benchmark-run-recall-marketing-public-grok-automation-gap-replay-recall-marketing-strategist-ilq5-dogfood-target-public-grok-automation-gap-baseline",
+          "benchmark://recall-marketing-public-grok-automation-gap/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-public-grok-automation-gap-replay-recall-marketing-strategist-ilq5-dogfood-target-public-grok-automation-gap-candidate"
+        ]
+      },
+      {
+        "id": "regression-overclaim",
+        "kind": "regression",
+        "title": "recall-marketing-overclaim-regression",
+        "taskId": "recall-marketing-overclaim-regression",
+        "baselineScore": 1,
+        "candidateScore": 1,
+        "delta": 0,
+        "passed": true,
+        "evidenceRef": "benchmark://recall-marketing-overclaim-regression/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-overclaim-regression-replay-recall-marketing-strategist-ilq5-dogfood-regression-overclaim-candidate",
+        "evidenceRefs": [
+          "benchmark://recall-marketing-overclaim-regression/specialist-recall-marketing-strategist-v1/benchmark-run-recall-marketing-overclaim-regression-replay-recall-marketing-strategist-ilq5-dogfood-regression-overclaim-baseline",
+          "benchmark://recall-marketing-overclaim-regression/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-overclaim-regression-replay-recall-marketing-strategist-ilq5-dogfood-regression-overclaim-candidate"
+        ]
+      },
+      {
+        "id": "target-observable-proof",
+        "kind": "target",
+        "title": "recall-marketing-observable-proof-moment",
+        "taskId": "recall-marketing-observable-proof-moment",
+        "baselineScore": 0,
+        "candidateScore": 1,
+        "delta": 1,
+        "passed": true,
+        "evidenceRef": "benchmark://recall-marketing-observable-proof-moment/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-observable-proof-moment-replay-recall-marketing-strategist-ilq5-dogfood-target-observable-proof-candidate",
+        "evidenceRefs": [
+          "benchmark://recall-marketing-observable-proof-moment/specialist-recall-marketing-strategist-v1/benchmark-run-recall-marketing-observable-proof-moment-replay-recall-marketing-strategist-ilq5-dogfood-target-observable-proof-baseline",
+          "benchmark://recall-marketing-observable-proof-moment/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-observable-proof-moment-replay-recall-marketing-strategist-ilq5-dogfood-target-observable-proof-candidate"
+        ]
+      }
+    ],
+    "evidenceRef": "specialist-replay://recall-marketing-strategist/proposal-recall-marketing-strategist-ilq5-dogfood/2/passed",
+    "createdAt": "2026-05-12T21:47:45.143Z"
+  },
+  "reviewPacket": {
+    "entryType": "specialist_review_packet",
+    "proposalId": "proposal-recall-marketing-strategist-ilq5-dogfood",
+    "specialistId": "recall-marketing-strategist",
+    "fromVersion": 1,
+    "candidateVersion": 2,
+    "proposalType": "prompt_patch",
+    "status": "ready_for_promotion",
+    "summary": "Require truthfulness and observability guardrails for public Recall marketing.",
+    "riskLevel": "medium",
+    "currentManifest": {
+      "purpose": "Improve Recall public positioning while preventing overclaims.",
+      "prompt": "Improve Recall public positioning while protecting truthfulness. Always distinguish current capability from roadmap, flag public-assistant/private-Recall automation gaps, avoid saying specialists learn through model training unless training exists, and turn abstract claims into visible proof moments with source-run and replay evidence.",
+      "retrievalRecipe": {},
+      "evalSet": [
+        "recall-marketing-public-grok-automation-gap",
+        "recall-marketing-overclaim-regression",
+        "recall-marketing-observable-proof-moment"
+      ]
+    },
+    "patch": {
+      "prompt": "Improve Recall public positioning while protecting truthfulness. Always distinguish current capability from roadmap, flag public-assistant/private-Recall automation gaps, avoid saying specialists learn through model training unless training exists, and turn abstract claims into visible proof moments with source-run and replay evidence.",
+      "evalSetAdditions": [
+        "recall-marketing-public-grok-automation-gap",
+        "recall-marketing-overclaim-regression",
+        "recall-marketing-observable-proof-moment"
+      ],
+      "approvedLessonsAdditions": [
+        "Recall marketing should say private Recall-connected workflow or explicit bridge unless public assistant access is actually implemented.",
+        "Evolving specialist claims should point to versioned bundles, source runs, replay evidence, and promoted lessons rather than hidden model learning.",
+        "Public proof loops need same-post observability: claim, source memory or run, replay/version evidence, and current-vs-roadmap boundary."
+      ],
+      "knownFailureBasinsAdditions": [
+        "basin:recall-marketing-overclaim"
+      ]
+    },
+    "sourceRunIds": [
+      "run-recall-marketing-strategist-ilq5-dogfood"
+    ],
+    "targetBasinIds": [
+      "basin:recall-marketing-overclaim"
+    ],
+    "evidenceRefs": [
+      "repo:docs/examples/intelligence/recall-marketing-strategist-dogfood.output.json"
+    ],
+    "replay": {
+      "id": "replay-recall-marketing-strategist-ilq5-dogfood",
+      "entryType": "specialist_replay",
+      "project": "recall-dev",
+      "specialistId": "recall-marketing-strategist",
+      "proposalId": "proposal-recall-marketing-strategist-ilq5-dogfood",
+      "fromVersion": 1,
+      "candidateVersion": 2,
+      "status": "passed",
+      "targetScore": 1,
+      "regressionScore": 0,
+      "passed": true,
+      "caseResults": [
+        {
+          "id": "target-public-grok-automation-gap",
+          "kind": "target",
+          "title": "recall-marketing-public-grok-automation-gap",
+          "taskId": "recall-marketing-public-grok-automation-gap",
+          "baselineScore": 0,
+          "candidateScore": 1,
+          "delta": 1,
+          "passed": true,
+          "evidenceRef": "benchmark://recall-marketing-public-grok-automation-gap/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-public-grok-automation-gap-replay-recall-marketing-strategist-ilq5-dogfood-target-public-grok-automation-gap-candidate",
+          "evidenceRefs": [
+            "benchmark://recall-marketing-public-grok-automation-gap/specialist-recall-marketing-strategist-v1/benchmark-run-recall-marketing-public-grok-automation-gap-replay-recall-marketing-strategist-ilq5-dogfood-target-public-grok-automation-gap-baseline",
+            "benchmark://recall-marketing-public-grok-automation-gap/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-public-grok-automation-gap-replay-recall-marketing-strategist-ilq5-dogfood-target-public-grok-automation-gap-candidate"
+          ]
+        },
+        {
+          "id": "regression-overclaim",
+          "kind": "regression",
+          "title": "recall-marketing-overclaim-regression",
+          "taskId": "recall-marketing-overclaim-regression",
+          "baselineScore": 1,
+          "candidateScore": 1,
+          "delta": 0,
+          "passed": true,
+          "evidenceRef": "benchmark://recall-marketing-overclaim-regression/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-overclaim-regression-replay-recall-marketing-strategist-ilq5-dogfood-regression-overclaim-candidate",
+          "evidenceRefs": [
+            "benchmark://recall-marketing-overclaim-regression/specialist-recall-marketing-strategist-v1/benchmark-run-recall-marketing-overclaim-regression-replay-recall-marketing-strategist-ilq5-dogfood-regression-overclaim-baseline",
+            "benchmark://recall-marketing-overclaim-regression/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-overclaim-regression-replay-recall-marketing-strategist-ilq5-dogfood-regression-overclaim-candidate"
+          ]
+        },
+        {
+          "id": "target-observable-proof",
+          "kind": "target",
+          "title": "recall-marketing-observable-proof-moment",
+          "taskId": "recall-marketing-observable-proof-moment",
+          "baselineScore": 0,
+          "candidateScore": 1,
+          "delta": 1,
+          "passed": true,
+          "evidenceRef": "benchmark://recall-marketing-observable-proof-moment/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-observable-proof-moment-replay-recall-marketing-strategist-ilq5-dogfood-target-observable-proof-candidate",
+          "evidenceRefs": [
+            "benchmark://recall-marketing-observable-proof-moment/specialist-recall-marketing-strategist-v1/benchmark-run-recall-marketing-observable-proof-moment-replay-recall-marketing-strategist-ilq5-dogfood-target-observable-proof-baseline",
+            "benchmark://recall-marketing-observable-proof-moment/specialist-recall-marketing-strategist-v2/benchmark-run-recall-marketing-observable-proof-moment-replay-recall-marketing-strategist-ilq5-dogfood-target-observable-proof-candidate"
+          ]
+        }
+      ],
+      "evidenceRef": "specialist-replay://recall-marketing-strategist/proposal-recall-marketing-strategist-ilq5-dogfood/2/passed",
+      "createdAt": "2026-05-12T21:47:45.143Z"
+    },
+    "missingEvidence": [],
+    "approveCommand": "node bin\\meridian.js intelligence specialist-promote proposal-recall-marketing-strategist-ilq5-dogfood --replay replay-recall-marketing-strategist-ilq5-dogfood",
+    "promotionDecision": "review_packet_ready"
+  },
+  "sourceRuns": [
+    {
+      "id": "run-recall-marketing-strategist-ilq5-dogfood",
+      "entryType": "specialist_run",
+      "project": "recall-dev",
+      "specialistId": "recall-marketing-strategist",
+      "specialistVersion": 1,
+      "input": {
+        "campaignIdea": "Use the Grok co-host setup to show the world Recall.",
+        "draftCopy": "I gave public @grok my Recall memory. Now it can answer from all my private Grok, Claude, ChatGPT, and local model sessions directly on X. Recall turns every model into a self-improving specialist.",
+        "constraints": [
+          "Do not claim public @grok can access private Recall unless a real bridge exists.",
+          "Distinguish current CLI/MCP/manual bridge capability from roadmap automation.",
+          "Turn abstract memory philosophy into a visible proof moment."
+        ],
+        "targetAudience": "technical founders and AI builders"
+      },
+      "retrievedMemoryRefs": [
+        "analysis:claude-observability-and-automation-gap"
+      ],
+      "output": {
+        "positioningSummary": "The strongest public angle is not that public @grok already has private Recall access; it is that a private Recall-connected workflow lets different AI tools share durable project memory through an explicit bridge. The proof moment should show the bridge and the remembered context in the same thread.",
+        "safeClaims": [
+          "Recall can act as a shared memory layer for MCP-compatible tools and local workflows.",
+          "A private Recall-connected session can reuse context created across Grok, Claude, ChatGPT, and local model workflows when those interactions are written into Recall.",
+          "Specialists improve through versioned prompts, retrieval recipes, source runs, replay evidence, and promoted lessons rather than hidden model training."
+        ],
+        "riskFlags": [
+          {
+            "risk": "automation-gap",
+            "issue": "The draft implies public @grok on X can directly access private Recall. Current workflow requires a private Recall-connected session or an explicit bridge.",
+            "severity": "high"
+          },
+          {
+            "risk": "overclaim",
+            "issue": "The draft says every model becomes self-improving, but the implemented loop improves specialist bundles through evidence and promotion, not model weights.",
+            "severity": "high"
+          },
+          {
+            "risk": "observability-gap",
+            "issue": "The draft is philosophical but does not give the audience a one-post proof moment they can inspect.",
+            "severity": "medium"
+          }
+        ],
+        "revisedCopy": "I am building Recall as my AI memory layer, not just another chatbot memory feature. The honest demo: I start an idea in one model, write the useful context into Recall, then have a Recall-connected specialist continue from that memory with a visible source run, replay, and version change. Public @grok does not magically read my private Recall yet; the bridge is explicit. That is the point: memory becomes infrastructure you can inspect.",
+        "proofMoment": "Post one short before/after: the original draft overclaims public @grok access, then the Recall-connected marketing specialist flags the automation gap, rewrites the claim, and links the source run plus replay evidence.",
+        "audience": "technical-founders",
+        "confidence": 0.86
+      },
+      "outcome": "helpful",
+      "score": 0.86,
+      "failureNotes": [],
+      "evidenceRefs": [
+        "repo:docs/examples/intelligence/recall-marketing-strategist-dogfood.output.json"
+      ],
+      "createdAt": "2026-05-12T21:47:30.490Z"
+    }
+  ],
+  "basins": [
+    {
+      "id": "basin:recall-marketing-overclaim",
+      "entryType": "failure_basin_lifecycle",
+      "project": "recall-dev",
+      "status": "closed",
+      "pattern": "basin:recall-marketing-overclaim",
+      "occurrenceCount": 1,
+      "specialistIds": [
+        "recall-marketing-strategist"
+      ],
+      "proposalIds": [
+        "proposal-recall-marketing-strategist-ilq5-dogfood"
+      ],
+      "replayIds": [
+        "replay-recall-marketing-strategist-ilq5-dogfood"
+      ],
+      "evidenceRefs": [
+        "repo:docs/examples/intelligence/recall-marketing-strategist-dogfood.output.json",
+        "specialist-replay://recall-marketing-strategist/proposal-recall-marketing-strategist-ilq5-dogfood/2/passed"
+      ],
+      "history": [
+        {
+          "at": "2026-05-12T21:47:40.722Z",
+          "from": null,
+          "to": "proposal_open",
+          "reason": "specialist_proposal_opened",
+          "evidenceRefs": [
+            "repo:docs/examples/intelligence/recall-marketing-strategist-dogfood.output.json"
+          ]
+        },
+        {
+          "at": "2026-05-12T21:47:45.143Z",
+          "from": "proposal_open",
+          "to": "under_replay",
+          "reason": "specialist_replay_passed_pending_promotion",
+          "evidenceRefs": [
+            "specialist-replay://recall-marketing-strategist/proposal-recall-marketing-strategist-ilq5-dogfood/2/passed"
+          ]
+        },
+        {
+          "at": "2026-05-12T21:47:56.223Z",
+          "from": "under_replay",
+          "to": "closed",
+          "reason": "specialist_promotion_closed_basin",
+          "evidenceRefs": [
+            "specialist-replay://recall-marketing-strategist/proposal-recall-marketing-strategist-ilq5-dogfood/2/passed"
+          ]
+        }
+      ],
+      "createdAt": "2026-05-12T21:47:40.722Z",
+      "updatedAt": "2026-05-12T21:47:56.223Z",
+      "closedAt": "2026-05-12T21:47:56.223Z",
+      "reopenedAt": null,
+      "retiredAt": null
+    }
+  ],
+  "consolidation": {
+    "syntheses": [],
+    "relations": [],
+    "retirements": []
+  },
+  "performanceHistory": [
+    {
+      "version": 2,
+      "proposalId": "proposal-recall-marketing-strategist-ilq5-dogfood",
+      "replayId": "replay-recall-marketing-strategist-ilq5-dogfood",
+      "targetScore": 1,
+      "regressionScore": 0,
+      "evidenceRef": "specialist-replay://recall-marketing-strategist/proposal-recall-marketing-strategist-ilq5-dogfood/2/passed",
+      "promotedAt": "2026-05-12T21:47:56.222Z"
+    }
+  ],
+  "evidenceRefs": [
+    "specialist-replay://recall-marketing-strategist/proposal-recall-marketing-strategist-ilq5-dogfood/2/passed",
+    "repo:docs/examples/intelligence/recall-marketing-strategist-dogfood.output.json"
+  ],
+  "publicDemoChecklist": {
+    "hasVersionSnapshot": true,
+    "hasProposal": true,
+    "hasReplay": true,
+    "hasReviewPacket": true,
+    "hasEvidenceRefs": true,
+    "hasClosedBasin": true,
+    "hasConsolidationArtifact": false
+  }
+}

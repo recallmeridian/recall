@@ -1,0 +1,24 @@
+image: node:22
+
+stages:
+  - verify
+
+open_source_readiness:
+  stage: verify
+  variables:
+    MERIDIAN_DATA: "$CI_PROJECT_DIR/.ci-meridian"
+    NPM_CONFIG_AUDIT: "false"
+    NPM_CONFIG_FUND: "false"
+  script:
+    - npm ci
+    - npm test -- --runInBand
+    - node bin/meridian.js open-source readiness --stage limited-public --release-mode npm
+    - npm pack --dry-run
+    - npm run release:mirror -- --output-dir "$CI_PROJECT_DIR/../recall-public-mirror-ci" --json
+    - mkdir -p ci-artifacts
+    - cp "$CI_PROJECT_DIR/../recall-public-mirror-ci/release-scope-export.json" ci-artifacts/release-scope-export.json
+  artifacts:
+    when: always
+    expire_in: 7 days
+    paths:
+      - ci-artifacts/release-scope-export.json

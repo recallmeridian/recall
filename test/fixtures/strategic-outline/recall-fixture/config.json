@@ -1,0 +1,68 @@
+{
+  "engine": "fixture",
+  "lastSync": "2026-05-10T00:00:00Z",
+  "dirty": false,
+  "projects": [
+    {
+      "id": "fixture-trading",
+      "name": "Fixture Trading Bot",
+      "type": "trading",
+      "description": "Synthetic trading project for outline tests",
+      "milestones": [
+        { "text": "Phase 1 — paper trading deployment", "done": true, "date": "2026-04-15" },
+        { "text": "Phase 2 — WFO ALL PASS", "done": false, "date": "2026-04-23" },
+        { "text": "Phase 3 — LIVE_TRADING enable", "done": false, "date": null },
+        { "text": "Phase 4 — multi-asset expansion", "done": false, "date": null }
+      ],
+      "todos": [
+        { "text": "Telegram alerts wiring", "status": "open", "date": "2026-04-20" },
+        { "text": "Drawdown auto-pause threshold", "status": "open", "date": "2026-04-22" },
+        { "text": "Old test cleanup", "status": "done", "date": "2026-04-10" }
+      ],
+      "decisions": []
+    },
+    {
+      "id": "fixture-product",
+      "name": "Fixture Product",
+      "type": "product",
+      "description": "Synthetic product project — milestones only, no todos, no decisions",
+      "milestones": [
+        { "text": "Core engine complete", "done": true, "date": "2026-04-02" },
+        { "text": "Open-source readiness", "done": false, "date": null }
+      ],
+      "todos": [],
+      "decisions": []
+    },
+    {
+      "id": "fixture-empty",
+      "name": "Fixture Empty",
+      "type": "off-peak",
+      "description": "Off-peak project with no work declared",
+      "milestones": [],
+      "todos": [],
+      "decisions": []
+    },
+    {
+      "id": "fixture-research",
+      "name": "Fixture Research",
+      "type": "foundation",
+      "description": "Foundation project — only TODOs, supports all peaks",
+      "milestones": [],
+      "todos": [
+        { "text": "Survey paper extraction methods", "status": "open", "date": "2026-04-30" }
+      ],
+      "decisions": []
+    },
+    {
+      "id": "fixture-unmapped",
+      "name": "Fixture Unmapped",
+      "type": "unknown",
+      "description": "Project intentionally absent from peak-alignment.json — exercises the unmapped warning section",
+      "milestones": [
+        { "text": "Random project work", "done": false, "date": null }
+      ],
+      "todos": [],
+      "decisions": []
+    }
+  ]
+}

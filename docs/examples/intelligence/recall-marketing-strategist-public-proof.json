@@ -1,0 +1,98 @@
+{
+  "entryType": "public_proof_packet",
+  "project": "recall-dev",
+  "generatedAt": "2026-05-12T22:58:00.706Z",
+  "specialistId": "recall-marketing-strategist",
+  "version": 2,
+  "claim": "Recall can show specialist improvement through source runs, replay evidence, review packets, and versioned promotions instead of vague memory claims.",
+  "audience": "technical-builders",
+  "versionChangeSummary": {
+    "specialistId": "recall-marketing-strategist",
+    "fromVersion": 1,
+    "toVersion": 2,
+    "proposalId": "proposal-recall-marketing-strategist-ilq5-dogfood",
+    "summary": "Require truthfulness and observability guardrails for public Recall marketing.",
+    "promoted": true,
+    "promotedAt": "2026-05-12T21:47:56.223Z",
+    "rollbackVersion": 1
+  },
+  "beforeAfterReplaySummary": {
+    "replayId": "replay-recall-marketing-strategist-ilq5-dogfood",
+    "status": "passed",
+    "passed": true,
+    "targetScore": 1,
+    "regressionScore": 0,
+    "targetCases": [
+      {
+        "id": "target-public-grok-automation-gap",
+        "baselineScore": 0,
+        "candidateScore": 1,
+        "delta": 1,
+        "passed": true
+      },
+      {
+        "id": "target-observable-proof",
+        "baselineScore": 0,
+        "candidateScore": 1,
+        "delta": 1,
+        "passed": true
+      }
+    ],
+    "regressionCases": [
+      {
+        "id": "regression-overclaim",
+        "baselineScore": 1,
+        "candidateScore": 1,
+        "delta": 0,
+        "passed": true
+      }
+    ]
+  },
+  "memoryRetrievalReceipt": {
+    "sourceRunIds": [
+      "run-recall-marketing-strategist-ilq5-dogfood"
+    ],
+    "retrievedMemoryRefs": [
+      "analysis:claude-observability-and-automation-gap"
+    ],
+    "sourceRunCount": 1,
+    "retrievedMemoryRefCount": 1,
+    "rawSourcePayloadsIncluded": false
+  },
+  "currentCapability": [
+    "A private Recall-connected workflow can export source-run, replay, review, basin, and version receipts for a promoted specialist."
+  ],
+  "roadmapBoundary": [
+    "This does not claim public @grok can directly read private Recall or that model weights trained themselves."
+  ],
+  "publicEvidenceTrail": {
+    "proposalId": "proposal-recall-marketing-strategist-ilq5-dogfood",
+    "replayId": "replay-recall-marketing-strategist-ilq5-dogfood",
+    "reviewStatus": "ready_for_promotion",
+    "closedBasins": [
+      {
+        "id": "basin:recall-marketing-overclaim",
+        "closedAt": "2026-05-12T21:47:56.223Z"
+      }
+    ],
+    "evidenceRefs": [
+      "specialist-replay://recall-marketing-strategist/proposal-recall-marketing-strategist-ilq5-dogfood/2/passed",
+      "repo:docs/examples/intelligence/recall-marketing-strategist-dogfood.output.json"
+    ]
+  },
+  "truthfulClaimChecklist": {
+    "distinguishesCurrentCapabilityFromRoadmap": true,
+    "hasReplayEvidence": true,
+    "hasSourceRunReceipt": true,
+    "hasMemoryRetrievalReceipt": true,
+    "hasVersionChangeSummary": true,
+    "avoidsRawPrivateSourcePayloads": true,
+    "hasClosedBasinEvidence": true
+  },
+  "publicPostTemplate": "Recall can show specialist improvement through source runs, replay evidence, review packets, and versioned promotions instead of vague memory claims.\nBefore/after replay: target 1, regression 0, status passed.\nEvidence receipt: 1 source run(s), 1 retrieved memory ref(s), 1 closed basin(s).\nCurrent: A private Recall-connected workflow can export source-run, replay, review, basin, and version receipts for a promoted specialist.\nRoadmap/not claimed: This does not claim public @grok can directly read private Recall or that model weights trained themselves.",
+  "privateDataPolicy": {
+    "rawSourceRunInputsIncluded": false,
+    "rawSourceRunOutputsIncluded": false,
+    "absoluteLocalPathsRedacted": true
+  }
+}

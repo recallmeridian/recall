@@ -1,0 +1,62 @@
+{
+  "name": "@recallmeridian/recall",
+  "version": "0.28.0",
+  "description": "Command-line interface for the Recall local knowledge platform",
+  "main": "bin/meridian.js",
+  "bin": {
+    "recall": "bin/recall.js",
+    "meridian": "bin/meridian.js",
+    "recall-chatgpt-mcp": "bin/recall-chatgpt-mcp.js",
+    "recall-stdio-mcp": "bin/recall-stdio-mcp.js"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "start": "node bin/meridian.js",
+    "mcp:chatgpt": "node bin/recall-chatgpt-mcp.js",
+    "mcp:stdio": "node bin/recall-stdio-mcp.js",
+    "mcp:configure-claude": "node scripts/configure-claude-desktop-recall.js",
+    "release:mirror": "node scripts/export-public-mirror.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "docs/examples/",
+    "docs/setup/",
+    "scripts/export-public-mirror.js",
+    "README.md",
+    "RECALL-PATTERN.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "ajv": "^8.17.0",
+    "ajv-formats": "^3.0.0",
+    "axios": "^1.7.0",
+    "better-sqlite3": "^12.9.0",
+    "chalk": "^4.1.2",
+    "commander": "^12.0.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/test/**/*.test.js"
+    ]
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/jesseneff/recall-public.git"
+  }
+}

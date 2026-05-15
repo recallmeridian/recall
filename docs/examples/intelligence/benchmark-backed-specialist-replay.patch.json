@@ -1,0 +1,13 @@
+{
+  "prompt": "Review implementation traces for recurring failures. Require replay evidence for every specialist promotion, including at least one target improvement and one non-regressed regression case.",
+  "evalSetAdditions": [
+    "codebase-trace-reviewer-replay-required",
+    "codebase-trace-reviewer-truthfulness-regression"
+  ],
+  "approvedLessonsAdditions": [
+    "Specialist promotion requires benchmark-backed replay evidence when benchmark tasks exist."
+  ],
+  "knownFailureBasinsAdditions": [
+    "basin:manual-replay-score-risk"
+  ]
+}

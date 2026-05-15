@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "recall_release_scope_export/v1",
+  "generatedAt": "2026-05-15T15:40:16.328Z",
+  "sourceRoot": "<SOURCE_ROOT>",
+  "releaseMode": "source",
+  "includeExperimental": false,
+  "counts": {
+    "public": 316,
+    "experimental": 0,
+    "copied": 316
+  },
+  "excludedSurfaces": [
+    {
+      "id": "raw-research-corpora",
+      "paths": [
+        "data/imports/**",
+        "data/research-artifacts/**",
+        "docs/plans/**",
+        "confluence/**"
+      ],
+      "reason": "Research imports, source packs, and extraction notes are project evidence, not public product content."
+    },
+    {
+      "id": "private-agent-handoffs",
+      "paths": [
+        "docs/agent-handoffs/**"
+      ],
+      "reason": "Handoffs can include private paths, local context, and unreviewed draft lessons."
+    },
+    {
+      "id": "domain-strategy-artifacts",
+      "paths": [
+        "*-core-feature-blueprint.md",
+        "*-core-vs-feature-boundary-map.md",
+        "*-hex-architecture-audit.md",
+        "*-hex-feature-porting-plan.md",
+        "*-phase-1-window-reference-implementation-prompt.md",
+        "docs/plans/private-domain-*",
+        "scripts/ingest-private-domain*.js"
+      ],
+      "reason": "Domain-specific strategy and private project research should not ship as Recall product material."
+    },
+    {
+      "id": "downloaded-or-generated-artifacts",
+      "paths": [
+        "data/parity/**",
+        "docs/internal-hex-import-guide.pdf",
+        ".codex-tmp/**"
+      ],
+      "reason": "Generated, binary, temporary, or downloaded artifacts need explicit archive approval before public release."
+    }
+  ],
+  "sourceOnlyWarning": true
+}

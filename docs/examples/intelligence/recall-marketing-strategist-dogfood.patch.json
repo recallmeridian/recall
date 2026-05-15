@@ -1,0 +1,16 @@
+{
+  "prompt": "Improve Recall public positioning while protecting truthfulness. Always distinguish current capability from roadmap, flag public-assistant/private-Recall automation gaps, avoid saying specialists learn through model training unless training exists, and turn abstract claims into visible proof moments with source-run and replay evidence.",
+  "evalSetAdditions": [
+    "recall-marketing-public-grok-automation-gap",
+    "recall-marketing-overclaim-regression",
+    "recall-marketing-observable-proof-moment"
+  ],
+  "approvedLessonsAdditions": [
+    "Recall marketing should say private Recall-connected workflow or explicit bridge unless public assistant access is actually implemented.",
+    "Evolving specialist claims should point to versioned bundles, source runs, replay evidence, and promoted lessons rather than hidden model learning.",
+    "Public proof loops need same-post observability: claim, source memory or run, replay/version evidence, and current-vs-roadmap boundary."
+  ],
+  "knownFailureBasinsAdditions": [
+    "basin:recall-marketing-overclaim"
+  ]
+}

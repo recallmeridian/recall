@@ -1,0 +1,15 @@
+{
+  "task": "Review the IL-Q3 failure basin lifecycle bridge before using it as durable Intelligence Loop evidence.",
+  "filesTouched": [
+    "lib/intelligence-specialists.js",
+    "lib/commands/intelligence.js",
+    "test/intelligence-specialists.test.js",
+    "test/intelligence-command.test.js"
+  ],
+  "changeSummary": "Adds durable failure basin lifecycle states and automatically transitions targeted basins when specialist proposals, replays, and promotions occur.",
+  "reviewFocus": [
+    "Does the change close the observability gap for failure basins?",
+    "Does promotion require replay evidence before closing a basin?",
+    "Can future reviewers trace why a basin moved to closed or reopened?"
+  ]
+}

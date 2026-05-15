@@ -1,0 +1,25 @@
+{
+  "summary": "The basin lifecycle bridge is directionally safe because closure is tied to replay-backed promotion rather than assertion. The main follow-up is to dogfood the reviewer against this exact change and keep source-run evidence attached to the proposal.",
+  "warnings": [
+    {
+      "concern": "A basin should not be marked closed directly from proposal creation or replay alone.",
+      "citedEntries": [
+        "basin:manual-replay-score-risk",
+        "specialist-replay://codebase-trace-reviewer/proposal-codebase-trace-reviewer-replay/2/passed"
+      ],
+      "severity": "medium"
+    }
+  ],
+  "suggestions": [
+    {
+      "suggestion": "Require source-run evidence from codebase-trace-reviewer when a proposal claims to close a basin.",
+      "citedEntries": [
+        "run-codebase-trace-reviewer-ilq4-dogfood"
+      ],
+      "estimatedImpact": "high"
+    }
+  ],
+  "doctrineFlags": [],
+  "riskLevel": "medium",
+  "confidence": 0.82
+}
